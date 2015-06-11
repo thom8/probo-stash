@@ -1,0 +1,12 @@
+# Port for the server to listen on
+port: 3011
+hostname: localhost
+
+stashWebhookPath: '/stash-webhook'
+
+# Settings for the API or Container Manager server
+# port
+api:
+  url: "http://localhost:3000"
+  token: "token2"
+
