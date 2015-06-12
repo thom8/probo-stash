@@ -1,0 +1,105 @@
+{
+  "repository": {
+    "slug": "testrepo",
+    "id": 1,
+    "name": "testrepo",
+    "scmId": "git",
+    "state": "AVAILABLE",
+    "statusMessage": "Available",
+    "forkable": true,
+    "project": {
+      "key": "TEST",
+      "id": 1,
+      "name": "test project",
+      "description": "this is the project description",
+      "public": false,
+      "type": "NORMAL"
+    },
+    "public": false
+  },
+  "refChanges": [
+    {
+      "refId": "refs/heads/feature",
+      "fromHash": "fe5ab7de213b7ae9929f543264cf50ec2e8f7b72",
+      "toHash": "383e221f3f407055bd252c774df4ecdc1a04ed6e",
+      "type": "UPDATE"
+    }
+  ],
+  "changesets": {
+    "size": 1,
+    "limit": 100,
+    "isLastPage": true,
+    "values": [
+      {
+        "fromCommit": {
+          "id": "fe5ab7de213b7ae9929f543264cf50ec2e8f7b72",
+          "displayId": "fe5ab7de213"
+        },
+        "toCommit": {
+          "id": "383e221f3f407055bd252c774df4ecdc1a04ed6e",
+          "displayId": "383e221f3f4",
+          "author": {
+            "name": "Ilya Braude",
+            "emailAddress": "ilya@bluenexa.com"
+          },
+          "authorTimestamp": 1434063152000,
+          "message": "Thu Jun 11 18:52:32 EDT 2015",
+          "parents": [
+            {
+              "id": "fe5ab7de213b7ae9929f543264cf50ec2e8f7b72",
+              "displayId": "fe5ab7de213"
+            }
+          ]
+        },
+        "changes": {
+          "size": 1,
+          "limit": 100,
+          "isLastPage": true,
+          "values": [
+            {
+              "contentId": "db8c421ee4e17b6bbc3614d6f6a3d6123964b941",
+              "fromContentId": "b4c86837c37c169b53a834d63a3ced5f90359730",
+              "path": {
+                "components": [
+                  "file2"
+                ],
+                "parent": "",
+                "name": "file2",
+                "toString": "file2"
+              },
+              "executable": false,
+              "percentUnchanged": -1,
+              "type": "MODIFY",
+              "nodeType": "FILE",
+              "srcExecutable": false,
+              "link": {
+                "url": "/projects/TEST/repos/testrepo/commits/383e221f3f407055bd252c774df4ecdc1a04ed6e#file2",
+                "rel": "self"
+              },
+              "links": {
+                "self": [
+                  {
+                    "href": "http://localhost:7990/projects/TEST/repos/testrepo/commits/383e221f3f407055bd252c774df4ecdc1a04ed6e#file2"
+                  }
+                ]
+              }
+            }
+          ],
+          "start": 0
+        },
+        "link": {
+          "url": "/projects/TEST/repos/testrepo/commits/383e221f3f407055bd252c774df4ecdc1a04ed6e#file2",
+          "rel": "self"
+        },
+        "links": {
+          "self": [
+            {
+              "href": "http://localhost:7990/projects/TEST/repos/testrepo/commits/383e221f3f407055bd252c774df4ecdc1a04ed6e#file2"
+            }
+          ]
+        }
+      }
+    ],
+    "start": 0
+  }
+}
