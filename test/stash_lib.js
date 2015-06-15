@@ -1,3 +1,4 @@
+var util = require('util');
 var should = require('should');
 
 var Stash = require('../lib/stash');
@@ -14,6 +15,23 @@ var stash_config = {
 }
 
 var stash = new Stash(stash_config);
+
+var nock = require('nock');
+var nocker = require('./__nocker');
+
+before(function(){
+  // play (nock out stash URLs):
+  var nocks = nocker.play('./test/stash_capture.json');
+
+  // // record:
+  // nocker.record();
+});
+
+after("stop StashHandler server", function(){
+  // stop recording:
+  // nocker.stop("./test/stash_capture.json");
+});
+
 
 describe("repos", function(){
   it("getAll", function(done){
