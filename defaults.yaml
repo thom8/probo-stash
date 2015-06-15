@@ -10,9 +10,10 @@ api:
   url: "http://localhost:3000"
   token: "token2"
 
-stash:
+providers:
   "stash:http://localhost:7990":
     url: "http://localhost:7990"
+    type: stash
     consumerKey: "stash.local.key"
     consumerSecret: |
       -----BEGIN RSA PRIVATE KEY-----
