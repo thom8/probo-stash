@@ -66,6 +66,8 @@ describe("repos", function(){
     stash.repos.getContent(req, function(err, files){
       should.not.exist(err);
 
+      // console.log(JSON.stringify(files, null, 2))
+
       files.should.be.an.Array;
       files.length.should.be.above(0);
       done(err);
