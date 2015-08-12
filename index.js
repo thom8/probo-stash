@@ -42,7 +42,7 @@ if (executor.options) {
     if (yargs.argv[key] != undefined) {
       setOptions[key] = yargs.argv[key];
     }
-    }
+  }
   loader.addAndNormalizeObject(setOptions);
 }
 
