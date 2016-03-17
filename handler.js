@@ -1,3 +1,5 @@
+'use strict';
+
 var StashHandler = require('./lib/StashHandler');
 
 var exports = function() {
@@ -30,13 +32,13 @@ exports.options = function(yargs) {
   ;
 };
 
-exports.configure = function(config) {
-  config = config;
+exports.configure = function(conf) {
+  config = conf;
   server = new StashHandler(config);
 };
 
 exports.run = function(cb) {
   server.start();
-}
+};
 
 module.exports = exports;

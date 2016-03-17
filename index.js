@@ -1,12 +1,13 @@
-var path = require('path'),
-    util = require('util'),
-    fs = require('fs');
+'use strict';
+
+var path = require('path');
+var util = require('util');
 
 var Loader = require('yaml-config-loader');
 var yargs = require('yargs');
 var loader = new Loader();
 
-loader.on('error', function(error){
+loader.on('error', function(error) {
   if (error.name === 'YAMLException') {
     console.error(util.print('Error parsing YAML file `', error.filePath, '`:', error.reason));
     console.log(error);
@@ -25,10 +26,10 @@ loader.addAndNormalizeObject(process.env);
 
 if (argv.config) {
   if (typeof argv.config === 'string') {
-    argv.config = [ argv.config ];
+    argv.config = [argv.config];
   }
-  for (var i in argv.config) {
-    loader.add(path.resolve(argv.config[i]));
+  for (let conf of argv.config) {
+    loader.add(path.resolve(conf));
   }
 }
 
@@ -39,7 +40,7 @@ if (executor.options) {
   var setOptions = {};
   var key = null;
   for (key in yargs.argv) {
-    if (yargs.argv[key] != undefined) {
+    if (yargs.argv[key] !== void 0) {
       setOptions[key] = yargs.argv[key];
     }
   }

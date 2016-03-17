@@ -1,14 +1,23 @@
 {
   "name": "probo-stash-handler",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "description": "Stash/Bitbucket Server webhook handler for Probo.CI",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "node index.js | bunyan",
+    "lint": "eslint bin lib test *.js",
     "test": "mocha --require should",
     "watch": "mocha -w --require should | bunyan"
   },
-  "author": "",
+  "author": "ProboCI <info@probo.ci> (http://probo.ci)",
+  "contributors": [
+    "Ilya Braude <ilyabraude@gmail.com>",
+    "Howard Tyson <howard@zivtech.com>"
+  ],
   "license": "Proprietary",
   "dependencies": {
     "async": "^1.5.0",
@@ -22,6 +31,8 @@
     "yargs": "^3.4.5"
   },
   "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-probo": "^1.0.2",
     "mocha": "^2.2.4",
     "nock": "^1.6.0",
     "request": "^2.57.0",
