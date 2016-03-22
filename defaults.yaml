@@ -2,7 +2,7 @@
 port: 3011
 hostname: localhost
 
-stashWebhookPath: '/stash-webhook'
+stashWebhookUrl: '/stash-webhook'
 
 # Settings for the API or Container Manager server
 # port
@@ -12,7 +12,8 @@ api:
 
 providers:
   "stash:http://localhost:7990":
-    url: "http://localhost:7990"
+    url: 'http://ilya-dev-stashserver.ngrok.probo.ci'
+#    url: "http://localhost:7990"
     type: stash
     consumerKey: "stash.local.key"
     consumerSecret: |
