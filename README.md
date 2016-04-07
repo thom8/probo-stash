@@ -45,6 +45,10 @@ Success. Stash is now available on http://localhost:7990
 
 ### OAuth private and public keys
 
-A private-public key pair is required to establish OAuth authorisation with an Atlassian product. The private key and public key can be generated using openssl:
+A private-public key pair is required to establish OAuth authorization with an Atlassian product. The private key and public key can be generated using openssl, and there's a handy script in `stash-oauth`.
 
-    todo...
+    cd stash-oauth
+    ./gen.sh
+    # follow prompts
+
+Then use the `stash.pub` key generated when creating an Application Link in Stash. Use the private key in `stash.key` in the `probo-web` and `stash-handler` config files.
