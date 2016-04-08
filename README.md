@@ -19,6 +19,7 @@ In order for Stash to support Probo, install the following Plugins. The plugins 
 1. [Stash Web Post Hooks Plugin](https://marketplace.atlassian.com/plugins/com.atlassian.stash.plugin.stash-web-post-receive-hooks-plugin/versions#b21) - for triggering webhooks for (all) commits
 
 To enable a Stash repo for Probo:
+
 1. Sync repos in web UI
 1. Enable the project
 1. Add a webhook to the Stash Web Post Hooks Plugin in the repository settings under **Workflow** > **Hooks**: https://app.probo.ci/stash-webhook
